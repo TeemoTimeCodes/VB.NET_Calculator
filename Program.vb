@@ -12,7 +12,7 @@ Public Module Module1
 		Console.Write(vbCrLf + "Press any key to continue... ")
 		Console.ReadKey(True)
 		Console.Clear()
-		Console.WriteLine("What function do you need the most?")
+		Console.WriteLine($"Choose a function out of this list: {vbCrLf} 'addition' {vbCrLf} 'subtraction' {vbCrLf} 'multiplication' {vbCrLf} 'division' {vbCrLf} 'percentage' {vbCrLf} 'square a number' {vbCrLf} 'cube a number' {vbCrLf} 'powers'")
 		_function = Console.ReadLine()
 		If _function = "addition" Then
 			Console.Clear()
