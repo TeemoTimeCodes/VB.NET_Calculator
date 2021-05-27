@@ -7,7 +7,11 @@ Public Module Module1
 		Dim Number3 As Decimal
 		Dim _function As String
 		Dim _functionSign As String
-		Console.WriteLine("Welcome to my calculator!")
+		Dim currentDate = DateTime.Now
+		Console.WriteLine($"{vbCrLf}Hello and welcome to My Calculator! You are using this application on {currentDate:d} at {currentDate:t}!")
+		Console.Write(vbCrLf + "Press any key to continue... ")
+		Console.ReadKey(True)
+		Console.Clear()
 		Console.WriteLine("What function do you need the most?")
 		_function = Console.ReadLine()
 		If _function = "addition" Then
@@ -68,10 +72,41 @@ Public Module Module1
 			Console.Clear()
 			Number3 = Number1 * Number2
 			Console.WriteLine("The answer to your question " & fullPercentage & "% of " & Number1 & " is " & Number3)
+		ElseIf _function = "square a number" Then
+			Console.Clear()
+			_functionSign = "²"
+			Console.WriteLine("Enter your value and press enter!")
+			Number1 = Console.ReadLine()
+			Console.Clear()
+			Number3 = Number1 * Number1
+			Console.WriteLine("The answer to your question " & Number1 & _functionSign & " is " & Number3)
+		ElseIf _function = "cube a number" Then
+			Console.Clear()
+			_functionSign = "³"
+			Console.WriteLine("Enter your value and press enter!")
+			Number1 = Console.ReadLine()
+			Console.Clear()
+			Number3 = Number1 * Number1 * Number1
+			Console.WriteLine("The answer to your question " & Number1 & _functionSign & " is " & Number3)
+		ElseIf _function = "powers" Then
+			Console.Clear()
+			Console.WriteLine("Enter your value and press enter!")
+			Number1 = Console.ReadLine()
+			Console.Clear()
+			Console.WriteLine("What do you want your power to be? Enter your value and press enter!")
+			Number2 = Console.ReadLine()
+			Number3 = Number1
+			Console.Clear()
+			For num As Integer = 0 To Number2 Step 1
+				Number1 = Number1 * Number3
+			Next
+			Console.WriteLine("The answer to your question " & Number3 & _functionSign & " is " & Number1)
 		Else
 			Console.Clear()
 			Console.Beep()
 			Console.Write("The function '" & _function & "' does not exist. Please enter a valid mathematical function!")
+			Console.ReadKey()
+
 		End If
 	End Sub
 End Module
