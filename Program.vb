@@ -8,6 +8,9 @@ Public Module Module1
 		Dim _function As String
 		Dim _functionSign As String
 		Dim currentDate = DateTime.Now
+		Console.WriteLine("This is an alpha version of this software. Some features may be faulted or not work at all.")
+		Console.ReadKey()
+		Console.Clear()
 		Console.WriteLine($"{vbCrLf}Hello and welcome to My Calculator! You are using this application on {currentDate:d} at {currentDate:t}!")
 		Console.Write(vbCrLf + "Press any key to continue... ")
 		Console.ReadKey(True)
