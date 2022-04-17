@@ -93,6 +93,7 @@ Public Module Module1
 			Console.WriteLine("The answer to your question " & Number1 & _functionSign & " is " & Number3)
 		ElseIf _function = "powers" Then
 			Console.Clear()
+			_functionSign = "^"
 			Console.WriteLine("Enter your value and press enter!")
 			Number1 = Console.ReadLine()
 			Console.Clear()
@@ -100,10 +101,8 @@ Public Module Module1
 			Number2 = Console.ReadLine()
 			Number3 = Number1
 			Console.Clear()
-			For num As Integer = 0 To Number2 Step 1
-				Number1 = Number1 * Number3
-			Next
-			Console.WriteLine("The answer to your question " & Number3 & _functionSign & " is " & Number1)
+			Number1 = Number1 ^ Number2
+			Console.WriteLine("The answer to your question " & Number3 & _functionSign & Number2 & " is " & Number1)
 		Else
 			Console.Clear()
 			Console.Beep()
